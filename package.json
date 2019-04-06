@@ -2,8 +2,9 @@
   "name": "node-express-app",
   "version": "1.0.0",
   "description": "Node Express Application",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mohamedsamara/Node-Express-App/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/Node-Express-App#readme"
+  "homepage": "https://github.com/mohamedsamara/Node-Express-App#readme",
+  "devDependencies": {
+    "express": "^4.16.4"
+  }
 }
