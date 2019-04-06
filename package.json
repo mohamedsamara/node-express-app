@@ -13,7 +13,8 @@
   },
   "keywords": [
     "node",
-    "express"
+    "express",
+    "pug"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/mohamedsamara/Node-Express-App#readme",
   "devDependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
   }
 }

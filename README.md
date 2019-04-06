@@ -20,3 +20,5 @@ npm start
 - [Node](https://nodejs.org/en/)
 
 - [Express](https://expressjs.com/)
+
+- [Pug](https://pugjs.org/api/getting-started.html)
