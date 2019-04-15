@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const config = require('./config/database');
+let Movie = require('./models/movie');
 
 mongoose.connect(config.database, { useNewUrlParser: true });
 let db = mongoose.connection;
@@ -21,8 +22,17 @@ const port = 3000;
 
 app.set('view engine', 'pug');
 
-app.get('/', (req, res) => {
-  res.render('index');
+// homepage route
+app.get('/', function(req, res) {
+  Movie.find({}, function(err, movies) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('index', {
+        movies: movies
+      });
+    }
+  });
 });
 
 app.listen(port, () => {

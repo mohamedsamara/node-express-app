@@ -1,4 +1,8 @@
 extends layout
 
 block content
-	h1 Node Express Pug Works!!       
+  h1 Movies 
+  ul.list-group
+    each movie, i in movies
+      li.list-group-item
+        a(href="/movies/"+movie._id)= movie.title
