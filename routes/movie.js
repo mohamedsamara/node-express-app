@@ -21,7 +21,28 @@ router.post('/edit/:id', function(req, res) {
 
   let query = { _id: req.params.id };
 
-  Movie.update(query, movie, function(err, data) {
+  Movie.updateOne(query, movie, function(err, data) {
+    if (err) {
+      throw err;
+    } else {
+      res.redirect('/');
+    }
+  });
+});
+
+router.get('/add', (req, res) => {
+  res.render('add', {});
+});
+
+router.post('/add', function(req, res) {
+  let movie = new Movie();
+  movie.title = req.body.title;
+  movie.year = req.body.year;
+  movie.imdb_rating = req.body.rating;
+  movie.country = req.body.country;
+  movie.language = req.body.language;
+
+  movie.save(function(err) {
     if (err) {
       throw err;
     } else {

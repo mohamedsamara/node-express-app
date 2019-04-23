@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	form(method='POST', action='/movies/add')
+		#form-group
+			label Title:
+			input.form-control(name='title', type='text')
+		#form-group
+			label Year:
+			input.form-control(name='year', type='text')
+		#form-group
+			label IMDB Rating:
+			input.form-control(name='rating', type='text')
+		#form-group
+			label Country:
+			input.form-control(name='country', type='text')
+		#form-group
+			label Language:
+			input.form-control(name='language', type='text')
+		br
+		input.btn.btn-primary(type='submit',value='Submit')
