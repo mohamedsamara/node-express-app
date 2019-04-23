@@ -14,7 +14,8 @@
   "keywords": [
     "node",
     "express",
-    "pug"
+    "pug",
+    "mongodb"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",

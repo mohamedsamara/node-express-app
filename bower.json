@@ -1,0 +1,27 @@
+{
+  "name": "node-express-app",
+  "description": "Node Express Application",
+  "main": "app.js",
+  "authors": [
+    "Mohamed Samara (https://github.com/mohamedsamara)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "express",
+    "pug",
+    "mongodb"
+  ],
+  "homepage": "https://github.com/mohamedsamara/Node-Express-App",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0"
+  }
+}

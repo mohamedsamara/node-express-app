@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const config = require('./config/database');
 let Movie = require('./models/movie');
@@ -19,6 +20,9 @@ db.on('error', function(err) {
 
 const app = express();
 const port = 3000;
+
+// set public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'pug');
 
