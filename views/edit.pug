@@ -1,0 +1,22 @@
+
+extends layout
+
+block content
+	form(method='POST', action='/movies/edit/'+movie._id)
+		#form-group
+			label Title:
+			input.form-control(name='title', type='text', value=movie.title)
+		#form-group
+			label Year:
+			input.form-control(name='year', type='text', value=movie.year)
+		#form-group
+			label IMDB Rating:
+			input.form-control(name='rating', type='text', value=movie.imdb_rating)
+		#form-group
+			label Country:
+			input.form-control(name='country', type='text', value=movie.country)
+		#form-group
+			label Language:
+			input.form-control(name='language', type='text', value=movie.language)
+		br
+		input.btn.btn-primary(type='submit',value='Submit')

@@ -28,6 +28,7 @@
     "pug": "^2.0.3"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "mongoose": "^5.5.1"
   }
 }
