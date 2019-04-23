@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	h1= movie.title
+	p= movie.description
+		a.btn.btn-default(href='/movies/edit/'+movie._id) Edit 
+		a.btn.btn-danger.delete-article(href='/movies/delete/'+movie._id) Delete

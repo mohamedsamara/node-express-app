@@ -14,6 +14,7 @@ router.get('/edit/:id', (req, res) => {
 router.post('/edit/:id', function(req, res) {
   let movie = {};
   movie.title = req.body.title;
+  movie.description = req.body.description;
   movie.year = req.body.year;
   movie.imdb_rating = req.body.rating;
   movie.country = req.body.country;
@@ -37,6 +38,7 @@ router.get('/add', (req, res) => {
 router.post('/add', function(req, res) {
   let movie = new Movie();
   movie.title = req.body.title;
+  movie.description = req.body.description;
   movie.year = req.body.year;
   movie.imdb_rating = req.body.rating;
   movie.country = req.body.country;
@@ -48,6 +50,25 @@ router.post('/add', function(req, res) {
     } else {
       res.redirect('/');
     }
+  });
+});
+
+router.get('/:id', function(req, res) {
+  Movie.findById(req.params.id, function(err, movie) {
+    res.render('view', {
+      movie: movie
+    });
+  });
+});
+
+router.get('/delete/:id', function(req, res) {
+  let query = { _id: req.params.id };
+
+  Movie.deleteOne(query, function(err) {
+    if (err) {
+      throw err;
+    }
+    res.redirect('/');
   });
 });
 
