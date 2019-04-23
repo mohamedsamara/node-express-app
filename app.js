@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const config = require('./config/database');
-let Movie = require('./models/movie');
+
+const { getHomePage } = require('./routes/index');
 
 mongoose.connect(config.database, { useNewUrlParser: true });
 let db = mongoose.connection;
@@ -26,18 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'pug');
 
-// homepage route
-app.get('/', function(req, res) {
-  Movie.find({}, function(err, movies) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render('index', {
-        movies: movies
-      });
-    }
-  });
-});
+// routes for the app
+app.get('/', getHomePage);
+
+// Route Files
+let movies = require('./routes/movie');
+app.use('/movies', movies);
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}!`);
