@@ -49,6 +49,16 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
+  font-weight: 500;
+}
+
+.btn-submit:hover {
+  background-color: #ff2f00d1;
+}
+
+.btn-submit:focus {
+  border: none;
+  outline: none;
 }
 
 .movie-header h4 {
@@ -81,6 +91,15 @@ body {
 .form-frame label {
   color: #ff2f00d1;
   font-weight: 600;
+}
+
+.error-input {
+  border-color: #ca191985;
+}
+.error-input:focus {
+  border-color: #ca191985;
+  border-width: 2px;
+  box-shadow: none;
 }
 
 /* end application styles */

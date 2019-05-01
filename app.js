@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 const path = require('path');
 
 const config = require('./config/database');
@@ -30,6 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+// Express Validator Middleware
+app.use(expressValidator());
 
 // routes for the app
 app.get('/', getHomePage);

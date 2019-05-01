@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	form.form-frame(method='POST', action='/movies/add')
+	form.form-frame(method='POST', action='/movies/add', onsubmit='return validateForm()')
 		h4 Add Movie 
 		<hr>
 		#form-group
