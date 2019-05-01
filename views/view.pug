@@ -1,7 +1,9 @@
 extends layout
 
 block content
-	h1= movie.title
-	p= movie.description
-		a.btn.btn-default(href='/movies/edit/'+movie._id) Edit 
-		a.btn.btn-danger.delete-article(href='/movies/delete/'+movie._id) Delete
+	.form-frame
+		div.d-flex.justify-content-between.align-items-center
+			h4= movie.description
+			div.d-flex.justify-content-end.align-items-center
+				a(href='/movies/edit/'+movie._id) Edit 
+				a.btn.btn-danger.delete-article(href='/movies/delete/'+movie._id) Delete

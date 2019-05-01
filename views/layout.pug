@@ -1,14 +1,38 @@
 doctype html
-html
+html(lang='en')
 	head
-		title Node Express Application
-		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
-		link(rel='stylesheet' href='/css/main.css')
-	body    
-		block content   
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title Movie Application
+		link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/main.css')
+		link(rel='icon', type='image/png', href='/images/favicon.png')
+	body
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+			.container
+				a.navbar-brand(href='/') Movie Application
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				#navbarResponsive.collapse.navbar-collapse
+					ul.navbar-nav.ml-auto
+						li.nav-item.active
+							a.nav-link(href='/')
+								| Home
+								span.sr-only (current)
+						li.nav-item
+							a.nav-link(href='/') Movies
+		.wrapper
+				.container
+					block content 
+
+		noscript  You need to enable JavaScript to run this app. 
+		script(src='/bower_components/jquery/dist/jquery.js')
+		script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
 
 
 
-script(src='/bower_components/jquery/dist/jquery.js')  
-script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
-script(src='/js/main.js')  
+
+		  
+
+

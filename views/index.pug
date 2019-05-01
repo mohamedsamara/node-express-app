@@ -1,8 +1,9 @@
 extends layout
 
 block content
-	h1 Movies 
-		a(href='/movies/add') Add Article
+	div.d-flex.justify-content-between.align-items-center.movie-header
+		h4 Movies 
+		a(href='/movies/add') Add Movie
 	ul.list-group
 		each movie, i in movies
 			li.list-group-item

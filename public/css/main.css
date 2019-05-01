@@ -1,3 +1,86 @@
 /* start application styles */
 
+/* scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff2f00;
+  border: 2px solid #ff2f00;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+/* scrollbar styles */
+
+a:hover {
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-color: rgba(39, 62, 84, 0.82);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 56px;
+}
+
+.wrapper {
+  padding: 56px 0px;
+}
+
+.btn-submit {
+  background-color: #ff2f00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+.movie-header h4 {
+  color: #fff;
+}
+
+.movie-header a {
+  color: #ccc;
+}
+
+.movie-header a:hover {
+  color: #fff;
+}
+
+.form-frame {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 5px 10px #888888;
+}
+
+.form-frame h4 {
+  text-transform: capitalize;
+  color: #ff2f00;
+}
+
+.form-frame a {
+  margin-left: 10px;
+}
+
+.form-frame label {
+  color: #ff2f00d1;
+  font-weight: 600;
+}
+
 /* end application styles */

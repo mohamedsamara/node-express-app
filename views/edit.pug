@@ -1,24 +1,26 @@
 extends layout
 
 block content
-	form(method='POST', action='/movies/edit/'+movie._id)
+	form.form-frame(method='POST', action='/movies/edit/'+movie._id)
+		h4 Edit Movie 
+		<hr>
 		#form-group
-			label Title:
+			label Title
 			input.form-control(name='title', type='text', value=movie.title)
 		#form-group
-			label Description:
+			label Description
 			input.form-control(name='description', type='text', value=movie.description)    
 		#form-group
-			label Year:
+			label Year
 			input.form-control(name='year', type='text', value=movie.year)
 		#form-group
-			label IMDB Rating:
+			label IMDB Rating
 			input.form-control(name='rating', type='text', value=movie.imdb_rating)
 		#form-group
-			label Country:
+			label Country
 			input.form-control(name='country', type='text', value=movie.country)
 		#form-group
-			label Language:
+			label Language
 			input.form-control(name='language', type='text', value=movie.language)
 		br
-		input.btn.btn-primary(type='submit',value='Submit')
+		input.btn-submit(type='submit',value='Update')
