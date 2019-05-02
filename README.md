@@ -14,7 +14,7 @@ This application will take in results from your users' surveys, then compare the
   * Jquery for frontend form validation
 
 
-![Node Express App](/public/images/Node-Express-App)
+![Node Express App](/public/images/Node-Express-App.gif)
 
 
 ## Install
