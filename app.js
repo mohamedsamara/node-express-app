@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+const session = require('express-session');
 const path = require('path');
 
 const config = require('./config/database');
@@ -32,8 +33,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Express Session Middleware
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Express Messages Middleware
+app.use(require('connect-flash')());
+app.use(function(req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
 // Express Validator Middleware
 app.use(expressValidator());
+
+app.get('/*', function(req, res, next) {
+  setTimeout(function() {
+    req.session.flash = [];
+  }, 3000);
+
+  next();
+});
 
 // routes for the app
 app.get('/', getHomePage);

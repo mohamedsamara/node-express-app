@@ -16,7 +16,8 @@
     "express",
     "pug",
     "mongodb",
-    "express-validator"
+    "express-validator",
+    "express-messages"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
@@ -24,13 +25,14 @@
     "url": "https://github.com/mohamedsamara/Node-Express-App/issues"
   },
   "homepage": "https://github.com/mohamedsamara/Node-Express-App#readme",
-  "devDependencies": {
-    "express": "^4.16.4",
-    "pug": "^2.0.3"
-  },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.16.1",
     "express-validator": "^5.3.1",
-    "mongoose": "^5.5.1"
+    "mongoose": "^5.5.1",
+    "pug": "^2.0.3"
   }
 }

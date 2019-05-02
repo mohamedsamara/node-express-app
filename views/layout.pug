@@ -23,7 +23,11 @@ html(lang='en')
 						li.nav-item
 							a.nav-link(href='/') Movies
 		.wrapper
-			.container  
+			.container
+				!= messages('message', locals)
+				if errors
+					each error, i in errors
+						div(class="alert alert-danger") #{error.msg}
 				block content 
 
 		noscript  You need to enable JavaScript to run this app. 
@@ -36,6 +40,6 @@ html(lang='en')
 
 
 
-		  
+
 
 
