@@ -13,6 +13,10 @@ This application will take in results from your users' surveys, then compare the
   * Express Validator validates the data on the server using validator.js functions and sanitizers
   * Jquery for frontend form validation
 
+
+![Node Express App](/public/images/Node-Express-App)
+
+
 ## Install
 
 Some basic Git commands are:
