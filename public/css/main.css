@@ -74,7 +74,7 @@ body {
 }
 
 .form-frame {
-  padding: 20px;
+  padding: 40px;
   background-color: #fff;
   box-shadow: 5px 10px #888888;
 }
@@ -96,10 +96,24 @@ body {
 .error-input {
   border-color: #ca191985;
 }
+
 .error-input:focus {
   border-color: #ca191985;
   border-width: 2px;
   box-shadow: none;
+}
+
+.movie-details {
+  margin-top: 30px;
+}
+
+.movie-details span {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.movie-details p {
+  color: rgba(39, 62, 84, 0.82);
 }
 
 /* end application styles */
