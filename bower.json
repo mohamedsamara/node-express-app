@@ -12,7 +12,7 @@
     "pug",
     "mongodb"
   ],
-  "homepage": "https://github.com/mohamedsamara/Node-Express-App",
+  "homepage": "https://github.com/mohamedsamara/node-express-app",
   "ignore": [
     "**/.*",
     "node_modules",
