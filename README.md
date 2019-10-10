@@ -22,7 +22,7 @@ This application will take in results from your users' surveys, then compare the
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/mohamedsamara/Node-Express-App.git
+$ git clone https://github.com/mohamedsamara/node-express-app.git
 $ cd project
 $ npm install
 $ bower install

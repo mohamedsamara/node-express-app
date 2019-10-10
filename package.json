@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedsamara/Node-Express-App.git"
+    "url": "git+https://github.com/mohamedsamara/node-express-app.git"
   },
   "keywords": [
     "node",
@@ -22,9 +22,9 @@
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohamedsamara/Node-Express-App/issues"
+    "url": "https://github.com/mohamedsamara/node-express-app/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/Node-Express-App#readme",
+  "homepage": "https://github.com/mohamedsamara/node-express-app#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
