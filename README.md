@@ -18,7 +18,6 @@ $ git clone https://github.com/mohamedsamara/node-express-app.git
 $ cd project
 $ npm install
 $ bower install
-
 ```
 
 ## Start
