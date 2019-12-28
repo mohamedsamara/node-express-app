@@ -22,7 +22,9 @@ $ bower install
 
 ## Start
 
-npm start
+```
+$ npm start
+```
 
 ## Languages & tools
 
