@@ -1,21 +1,13 @@
 # Node Express App
 
-## Description
-
-This application will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
-
 * features:
   * Node provides the backend environment for this application
   * Express middleware is used to handle requests, routes and views
   * Mongo DB, no SQL database, to store the application data
   * Mongoose schemas to model the application data
-  * Pug is to render server side templates 
+  * Pug template engine is used to generate server side templates 
   * Express Validator validates the data on the server using validator.js functions and sanitizers
   * Jquery for frontend form validation
-
-
-![Node Express App](/public/images/Node-Express-App.gif)
-
 
 ## Install
 
@@ -43,9 +35,9 @@ npm start
 
 - [Mongoose](https://mongoosejs.com/)
 
-- [Pug](https://pugjs.org/api/getting-started.html)
+- [Pug](https://pugjs.org/)
 
-- [Express Validator](https://express-validator.github.io/docs/)
+- [Express Validator](https://express-validator.github.io)
 
 - [Express Messages](https://github.com/visionmedia/express-messages)
 

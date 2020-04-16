@@ -5,7 +5,7 @@
   "authors": [
     "Mohamed Samara (https://github.com/mohamedsamara)"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "node",
     "express",
