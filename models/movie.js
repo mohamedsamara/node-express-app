@@ -11,8 +11,8 @@ let movieSchema = mongoose.Schema({
   },
   year: {
     type: String
-  },
-  imdb_rating: {
+  },  
+  imdbRating: {
     type: Number
   },
   country: {

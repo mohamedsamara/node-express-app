@@ -18,7 +18,7 @@ router.post('/edit/:id', function(req, res) {
   movie.title = req.body.title;
   movie.description = req.body.description;
   movie.year = req.body.year;
-  movie.imdb_rating = req.body.rating;
+  movie.imdbRating = req.body.rating;
   movie.country = req.body.country;
   movie.language = req.body.language;
 
@@ -87,7 +87,7 @@ router.post(
       movie.title = req.body.title;
       movie.description = req.body.description;
       movie.year = req.body.year;
-      movie.imdb_rating = req.body.rating;
+      movie.imdbRating = req.body.rating;
       movie.country = req.body.country;
       movie.language = req.body.language;
 

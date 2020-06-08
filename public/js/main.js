@@ -25,8 +25,8 @@ var validateFormData = function() {
 function validateForm() {
   if (validateFormData()) {
     console.log('valid!');
-  } else {
-    alert('Some data is required!!');
+  } else { 
+    alert('Some data are required!!');
     return false;
   }
 }
