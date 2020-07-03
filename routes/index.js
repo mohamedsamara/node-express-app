@@ -1,9 +1,9 @@
 let Movie = require('../models/movie');
 
-const getHomePage = (req, res) => {
+const getHomepage = (req, res) => {
   Movie.find({}, function(err, movies) {
     if (err) {
-      console.log(err);
+      throw err;
     } else {
       res.render('index', {
         movies: movies
@@ -13,5 +13,5 @@ const getHomePage = (req, res) => {
 };
 
 module.exports = {
-  getHomePage
+  getHomepage
 };
