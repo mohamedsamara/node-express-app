@@ -8,18 +8,13 @@ const path = require('path');
 
 const { getHomepage } = require('./routes/index');
 
-mongoose.connect(process.env.database, { useNewUrlParser: true });
-let db = mongoose.connection;
-
-// connect to MongoDB
-db.once('open', function() {
-  console.log('Connected to MongoDB');
-});
-
-// check for MongoDB connection error
-db.on('error', function(err) {
-  console.log(err);
-});
+mongoose.connect(process.env.database, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+}).then(() =>
+  console.log('MongoDB Connected!')
+).catch(err => console.log(err));;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -44,7 +39,7 @@ app.use(
 
 // Express Messages Middleware
 app.use(require('connect-flash')());
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
@@ -59,6 +54,6 @@ app.get('/', getHomepage);
 let movies = require('./routes/movie');
 app.use('/movies', movies);
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`app listening on port ${PORT}!`);
 });
